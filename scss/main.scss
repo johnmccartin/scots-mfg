@@ -1,0 +1,240 @@
+/*
+
+
+      ___           ___       ___       ___           ___     
+     /\  \         /\__\     /\__\     /\  \         |\__\    
+    /::\  \       /:/  /    /:/  /    /::\  \        |:|  |   
+   /:/\:\  \     /:/  /    /:/  /    /:/\:\  \       |:|  |   
+  /::\~\:\  \   /:/  /    /:/  /    /::\~\:\  \      |:|__|__ 
+ /:/\:\ \:\__\ /:/__/    /:/__/    /:/\:\ \:\__\     /::::\__\
+ \/__\:\/:/  / \:\  \    \:\  \    \:\~\:\ \/__/    /:/~~/~   
+      \::/  /   \:\  \    \:\  \    \:\ \:\__\     /:/  /     
+      /:/  /     \:\  \    \:\  \    \:\ \/__/     \/__/      
+     /:/  /       \:\__\    \:\__\    \:\__\                  
+     \/__/         \/__/     \/__/     \/__/                  
+     
+      ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \    
+    /:/  /        /::\  \       /:/  /        /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:/  /        /:/\ \  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/  /  ___   _\:\~\ \  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/__/  /\__\ /\ \:\ \ \__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \:\  \ /:/  / \:\ \:\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /       \::/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+http://www.alleyhouseestudio.com
+
+
+
+
+My simplistic attempts at
+												  
+	  _|_|      _|_|      _|_|_|    _|_|_|    _|_|_|  
+	_|    _|  _|    _|  _|        _|        _|        
+	_|    _|  _|    _|  _|          _|_|      _|_|    
+	_|    _|  _|    _|  _|              _|        _|  
+	  _|_|      _|_|      _|_|_|  _|_|_|    _|_|_|   
+			  
+breaking from that model for where need be.
+                                                 
+    
+    
+
+  /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+
+
+		TABLE OF CONTENTS
+		------------------------------------------
+		1.	Positioners
+		2.	Borders
+		3.	Margins
+		4.	Padding
+		5.	Z Axis
+		6.	Text Alignments
+		7.	Invert Colors
+		8.	Menu Styles
+		9.	Search Bar
+		10.	WP img alignment class support
+		11.	Page Builder Support
+		12.	Breadcrumb support
+		13.	Main Styles
+		14.	Footer Styles
+		15. Media Queries
+
+		** Dependencies: Pure CSS (responsive rollup) http://purecss.io/
+		
+
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+
+
+
+
+                 _       _     _           
+__   ____ _ _ __(_) __ _| |__ | | ___  ___ 
+\ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+  \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+*/
+
+
+
+$font-stack: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$primary-dark: #0065BD;
+$primary-light: #fff;
+$mid-tone: #666;
+$mid-light: #ddd;
+$highlight: purple;
+$base-size: 16px;
+$reader-size: 1.25em;
+
+
+
+@import 'border';
+@import 'positioners';
+@import 'dark';
+@import 'debug';
+@import 'mp';
+@import 'queries';
+@import 'text';
+@import 'zs';
+
+
+*, .pure-g > div {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+html, button, input, select, textarea {
+  font-family: $font-stack;
+  font-size: $base-size;
+  color: $primary-light;
+  font-weight: 300;
+  background: $primary-dark;
+}
+
+//.pure-g [class *= "pure-u"]
+
+a {
+  color: highlight;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inner {
+  width: 85%;
+  max-width: 900px;
+}
+
+.content {
+  min-height: 30em;
+}
+
+
+
+
+/*
+
+
+            __             _     
+ _ __ ___  / _| __ ___   _(_)___ 
+| '_ ` _ \| |_ / _` \ \ / / / __|
+| | | | | |  _| (_| |\ V /| \__ \
+|_| |_| |_|_|  \__, (_)_/ |_|___/
+               |___/             
+		
+        
+*/
+
+.show-sectors {
+  padding: 1em 3em;
+  outline: 0;
+  border: 1px solid $primary-light;
+  position: relative;
+  transition: background .3s linear;
+  
+  &:hover {
+    background: lighten($primary-dark,5);
+  }
+  
+  &.sectors-on {
+    box-shadow: 0px 0px 5px $primary-light;
+    background: lighten($primary-dark,5);
+  }
+}
+
+.chart {
+  rect {
+    fill: $primary-light;
+    
+    &:hover {
+      fill: $mid-tone;
+    }
+  }
+  
+  text {
+    fill: $primary-light;
+    text-anchor: middle;
+    font-size: .8em;
+  }
+  
+  .axis path {
+    fill: none;
+    stroke: $primary-light;
+    shape-rendering: crispEdges;
+  }
+  
+  .line {
+    fill: none;
+    stroke: $primary-light;
+    stroke-width: 1px;
+    opacity: 0;
+  }
+  
+  .sector {
+    path {
+      stroke-dasharray: 3,3;
+    }
+    
+    &.mfg {
+      path {
+        stroke-dasharray: none;
+      }
+    }
+  }
+  
+}
+
+.pt {
+  fill: red;
+  cursor: pointer;
+}

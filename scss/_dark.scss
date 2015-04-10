@@ -1,0 +1,53 @@
+.dark {
+
+	background: $primary-dark;
+	color: $primary-light;
+
+
+	
+
+	.border {
+	  border-color: $primary-light;
+	}
+
+	.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+	  background: transparent;
+	  border: 0px;
+	}
+
+	.pure-menu a, .pure-menu .pure-menu-can-have-children>li:after {
+	  color: $primary-light;
+	}
+
+	.pure-menu li a {
+	  padding: 5px 0px;
+	}
+	
+	.pure-menu li:hover, .pure-menu li:focus {
+	  background: $highlight;
+	  color: $primary-light;
+	}
+
+	
+	.pure-menu .sub-menu a {
+	  color: $primary-dark;
+	}
+	
+	.pure-menu .sub-menu li:hover > a {
+	  color: $primary-light;
+	}
+	
+	a {
+	  color: $primary-light;
+	}
+	
+	a:hover {
+	  //color: $mid-light;
+	}
+	
+
+}
+
+.brand-title.dark {
+  background: $highlight;
+}

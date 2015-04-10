@@ -1,0 +1,560 @@
+/*
+
+
+      ___           ___       ___       ___           ___     
+     /\  \         /\__\     /\__\     /\  \         |\__\    
+    /::\  \       /:/  /    /:/  /    /::\  \        |:|  |   
+   /:/\:\  \     /:/  /    /:/  /    /:/\:\  \       |:|  |   
+  /::\~\:\  \   /:/  /    /:/  /    /::\~\:\  \      |:|__|__ 
+ /:/\:\ \:\__\ /:/__/    /:/__/    /:/\:\ \:\__\     /::::\__\
+ \/__\:\/:/  / \:\  \    \:\  \    \:\~\:\ \/__/    /:/~~/~   
+      \::/  /   \:\  \    \:\  \    \:\ \:\__\     /:/  /     
+      /:/  /     \:\  \    \:\  \    \:\ \/__/     \/__/      
+     /:/  /       \:\__\    \:\__\    \:\__\                  
+     \/__/         \/__/     \/__/     \/__/                  
+     
+      ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \    
+    /:/  /        /::\  \       /:/  /        /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:/  /        /:/\ \  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/  /  ___   _\:\~\ \  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/__/  /\__\ /\ \:\ \ \__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \:\  \ /:/  / \:\ \:\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /       \::/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+http://www.alleyhouseestudio.com
+
+
+
+
+My simplistic attempts at
+												  
+	  _|_|      _|_|      _|_|_|    _|_|_|    _|_|_|  
+	_|    _|  _|    _|  _|        _|        _|        
+	_|    _|  _|    _|  _|          _|_|      _|_|    
+	_|    _|  _|    _|  _|              _|        _|  
+	  _|_|      _|_|      _|_|_|  _|_|_|    _|_|_|   
+			  
+breaking from that model for where need be.
+                                                 
+    
+    
+
+  /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+
+
+		TABLE OF CONTENTS
+		------------------------------------------
+		1.	Positioners
+		2.	Borders
+		3.	Margins
+		4.	Padding
+		5.	Z Axis
+		6.	Text Alignments
+		7.	Invert Colors
+		8.	Menu Styles
+		9.	Search Bar
+		10.	WP img alignment class support
+		11.	Page Builder Support
+		12.	Breadcrumb support
+		13.	Main Styles
+		14.	Footer Styles
+		15. Media Queries
+
+		** Dependencies: Pure CSS (responsive rollup) http://purecss.io/
+		
+
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+
+
+
+
+                 _       _     _           
+__   ____ _ _ __(_) __ _| |__ | | ___  ___ 
+\ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+  \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+*/
+.border {
+  border-color: #666666;
+}
+
+.border-mid {
+  border-color: #dddddd;
+}
+
+.border-1 {
+  border: 1px solid;
+}
+
+.border-2 {
+  border: 2px solid;
+}
+
+.border-4 {
+  border: 4px solid;
+}
+
+.border-top-1 {
+  border-top: 1px solid;
+}
+
+.border-top-2 {
+  border-top: 2px solid;
+}
+
+.border-top-4 {
+  border-top: 4px solid;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid;
+}
+
+.border-bottom-4 {
+  border-bottom: 4px solid;
+}
+
+.border-left-1 {
+  border-left: 1px solid;
+}
+
+.border-left-2 {
+  border-left: 2px solid;
+}
+
+.border-left-4 {
+  border-left: 4px solid;
+}
+
+.border-right-1 {
+  border-right: 1px solid;
+}
+
+.border-right-2 {
+  border-right: 2px solid;
+}
+
+.border-right-4 {
+  border-right: 4px solid;
+}
+
+.pull-down {
+  bottom: 0;
+  position: fixed;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.stretch-lr {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.stretch-all {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.static {
+  position: static !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.centered {
+  margin: 0px auto;
+}
+
+.dark {
+  background: #0065bd;
+  color: white;
+}
+.dark .border {
+  border-color: white;
+}
+.dark .pure-menu.pure-menu-open, .dark .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+.dark .pure-menu a, .dark .pure-menu .pure-menu-can-have-children > li:after {
+  color: white;
+}
+.dark .pure-menu li a {
+  padding: 5px 0px;
+}
+.dark .pure-menu li:hover, .dark .pure-menu li:focus {
+  background: purple;
+  color: white;
+}
+.dark .pure-menu .sub-menu a {
+  color: #0065bd;
+}
+.dark .pure-menu .sub-menu li:hover > a {
+  color: white;
+}
+.dark a {
+  color: white;
+}
+
+.brand-title.dark {
+  background: purple;
+}
+
+.debug {
+  border: 0px solid red;
+}
+
+/**********************************
+			MARGIN
+**********************************/
+.margin-1 {
+  margin: 1em;
+}
+
+.margin-2 {
+  margin: 2em;
+}
+
+.margin-4 {
+  margin: 4em;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+.margin-top-4 {
+  margin-top: 4em;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+.margin-bottom-4 {
+  margin-bottom: 4em;
+}
+
+.margin-tb-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.margin-tb-2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margin-tb-4 {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.margin-right-1 {
+  margin-right: 1em;
+}
+
+.margin-right-2 {
+  margin-right: 2em;
+}
+
+.margin-right-4 {
+  margin-right: 4em;
+}
+
+.margin-left-1 {
+  margin-left: 1em;
+}
+
+.margin-left-2 {
+  margin-left: 2em;
+}
+
+.margin-left-4 {
+  margin-left: 4em;
+}
+
+.margin-lr-1 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.margin-lr-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.margin-lr-4 {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+/**********************************
+			PADDING
+**********************************/
+.padding-1 {
+  padding: 1em;
+}
+
+.padding-2 {
+  padding: 2em;
+}
+
+.padding-4 {
+  padding: 4em;
+}
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+.padding-top-4 {
+  padding-top: 4em;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 2em;
+}
+
+.padding-bottom-4 {
+  padding-bottom: 4em;
+}
+
+.padding-tb-1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.padding-tb-2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-tb-4 {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.padding-right-1 {
+  padding-right: 1em;
+}
+
+.padding-right-2 {
+  padding-right: 2em;
+}
+
+.padding-right-4 {
+  padding-right: 4em;
+}
+
+.padding-left-1 {
+  padding-left: 1em;
+}
+
+.padding-left-2 {
+  padding-left: 2em;
+}
+
+.padding-left-4 {
+  padding-left: 4em;
+}
+
+.padding-lr-1 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.padding-lr-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.padding-lr-4 {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/*zs*/
+.top {
+  z-index: 99999;
+}
+
+.bottom {
+  z-index: -99999;
+}
+
+*, .pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, button, input, select, textarea {
+  font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: 300;
+  background: #0065bd;
+}
+
+a {
+  color: highlight;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inner {
+  width: 85%;
+  max-width: 900px;
+}
+
+.content {
+  min-height: 30em;
+}
+
+/*
+
+
+            __             _     
+ _ __ ___  / _| __ ___   _(_)___ 
+| '_ ` _ \| |_ / _` \ \ / / / __|
+| | | | | |  _| (_| |\ V /| \__ \
+|_| |_| |_|_|  \__, (_)_/ |_|___/
+               |___/             
+		
+        
+*/
+.show-sectors {
+  padding: 1em 3em;
+  outline: 0;
+  border: 1px solid white;
+  position: relative;
+  transition: background .3s linear;
+}
+.show-sectors:hover {
+  background: #0073d7;
+}
+.show-sectors.sectors-on {
+  box-shadow: 0px 0px 5px white;
+  background: #0073d7;
+}
+
+.chart rect {
+  fill: white;
+}
+.chart rect:hover {
+  fill: #666666;
+}
+.chart text {
+  fill: white;
+  text-anchor: middle;
+  font-size: .8em;
+}
+.chart .axis path {
+  fill: none;
+  stroke: white;
+  shape-rendering: crispEdges;
+}
+.chart .line {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+  opacity: 0;
+}
+.chart .sector path {
+  stroke-dasharray: 3,3;
+}
+.chart .sector.mfg path {
+  stroke-dasharray: none;
+}
+
+.pt {
+  fill: red;
+  cursor: pointer;
+}

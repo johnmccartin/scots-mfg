@@ -1,0 +1,10 @@
+
+@mixin bordered {
+ border: 0px solid red;
+ }
+
+.debug {
+	@include bordered;
+}
+
+

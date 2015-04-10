@@ -1,0 +1,50 @@
+.pull-down {
+  bottom: 0;
+  position: fixed;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.stretch-lr {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.stretch-all {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.static {
+  position: static !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.centered {
+  margin: 0px auto;
+}
