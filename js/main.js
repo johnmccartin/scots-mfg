@@ -96,7 +96,9 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
   var all = sectors;
   var mfg = sectors.slice(0,1);
   var base = sectors.slice(-1);
+  console.log(base);
   mfg = mfg.push(base);
+  console.log(mfg);
   
   var a = {width:width, height:height};
     
