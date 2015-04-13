@@ -138,7 +138,6 @@ html, button, input, select, textarea {
   background: $primary-dark;
 }
 
-//.pure-g [class *= "pure-u"]
 
 a {
   color: highlight;
@@ -152,7 +151,6 @@ a {
 
 .inner {
   width: 95%;
-  //max-width: 900px;
 }
 
 .content {
@@ -181,6 +179,8 @@ a {
   border: 1px solid $primary-light;
   position: relative;
   transition: background .3s linear;
+  float: left;
+  clear: both;
   
   &:hover {
     background: lighten($primary-dark,5);
@@ -193,6 +193,9 @@ a {
 }
 
 .chart {
+
+  float: left;
+
   rect {
     fill: $primary-light;
     

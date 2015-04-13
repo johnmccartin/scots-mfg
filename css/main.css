@@ -515,6 +515,8 @@ a {
   border: 1px solid white;
   position: relative;
   transition: background .3s linear;
+  float: left;
+  clear: both;
 }
 .show-sectors:hover {
   background: #0073d7;
@@ -524,6 +526,9 @@ a {
   background: #0073d7;
 }
 
+.chart {
+  float: left;
+}
 .chart rect {
   fill: white;
 }
