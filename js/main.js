@@ -96,9 +96,7 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
   var all = sectors;
   var mfg = sectors.slice(0,1);
   var base = sectors.slice(-1);
-  console.log(base);
-  mfg = mfg.push(base);
-  console.log(mfg);
+  var mfg2 = mfg.push.apply(mfg,base);
   
   var a = {width:width, height:height};
     
@@ -129,8 +127,8 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
 		d3.select(".show-sectors").on("click",function(){
 			if(this.classList.contains("sectors-on")) {
 			  chart.selectAll(".sector").remove();
-			  rescale(mfg);
-			  sectorLine(mfg);
+			  rescale(mfg2);
+			  sectorLine(mfg2);
 			  d3.select(this).classed("sectors-on",false);
 			} else {
 			  chart.selectAll(".sector").remove();
