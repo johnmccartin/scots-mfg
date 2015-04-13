@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 	
 });
@@ -24,7 +26,6 @@ var width = 600 - margin.left - margin.right;
 
 
 var w = 600;
-
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
 	width = w - margin.left - margin.right,
