@@ -127,8 +127,8 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
 		d3.select(".show-sectors").on("click",function(){
 			if(this.classList.contains("sectors-on")) {
 			  chart.selectAll(".sector").remove();
-			  rescale(mfg2);
-			  sectorLine(mfg2);
+			  rescale(mfg);
+			  sectorLine(mfg);
 			  d3.select(this).classed("sectors-on",false);
 			} else {
 			  chart.selectAll(".sector").remove();
