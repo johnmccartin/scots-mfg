@@ -553,6 +553,9 @@ a {
 .chart .sector.mfg path {
   stroke-dasharray: none;
 }
+.chart .sector.basis path {
+  stroke-dasharray: none;
+}
 
 .pt {
   fill: red;

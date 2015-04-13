@@ -230,6 +230,12 @@ a {
         stroke-dasharray: none;
       }
     }
+    
+     &.basis {
+      path {
+        stroke-dasharray: none;
+      }
+    }
   }
   
 }

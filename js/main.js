@@ -64,29 +64,7 @@ var chart = d3.select(".chart")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-/*
-var extent = d3.extent(data,function(d) { return d.date; }),
-	dateHash = data.reduce(fucntion(agg, d) {
-		agg[d.date] = true;
-		return agg;
-	}, {}),
-	headers = color.domain();
-	
-	d3.time.days(extent[0], extent[1])
-		.filter(function(date) {
-			return !dateHash[date];
-		})
-		.forEach(function(date) {
-			var emptyRows = { date: date };
-			headers.forEach(function(header) {
-				emptyRow[header] = null;
-			});
-			data.push(emptyRow);
-		});
-		
-	data.sort(function(a,b) { return d3.ascending(a
 
-	*/
 
 d3.csv("./data/scot_mfg.csv", function(error, data) {
 	color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
@@ -117,7 +95,8 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
   
   var all = sectors;
   var mfg = sectors.slice(0,1);
-  console.log(all);
+  var base = sectors.slice(-1);
+  mfg = mfg.push(base);
   
   var a = {width:width, height:height};
     
