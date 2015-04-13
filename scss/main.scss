@@ -138,6 +138,16 @@ html, button, input, select, textarea {
   background: $primary-dark;
 }
 
+::selection {
+  color: $primary-light;
+  background: $mid-tone;
+}
+
+::-moz-selection {
+  color: $primary-dark;
+  background: $primary-light;
+}
+
 
 a {
   color: highlight;
@@ -181,6 +191,7 @@ a {
   transition: background .3s linear;
   float: left;
   clear: both;
+  margin-left: 6.4em;
   
   &:hover {
     background: lighten($primary-dark,5);
@@ -195,6 +206,7 @@ a {
 .chart {
 
   float: left;
+  margin-left: 4em;
 
   rect {
     fill: $primary-light;
@@ -235,9 +247,12 @@ a {
     }
     
      &.basis {
+     z-index: 0;
+     position: relative;
       path {
         stroke-dasharray: none;
         stroke: lighten($primary-dark, 5);
+        
       }
     }
   }
@@ -247,4 +262,14 @@ a {
 .pt {
   fill: red;
   cursor: pointer;
+}
+
+@media screen and (max-width: 48em) {
+  .chart {
+    margin-left: 4em;
+  }
+  
+  .show-sectors {
+    margin-left: 6.4em;
+  }
 }

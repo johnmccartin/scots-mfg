@@ -23,11 +23,11 @@ var width = 600 - margin.left - margin.right;
 	];
 
 
-
+var w = 600;
 
 
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
-	width = 600 - margin.left - margin.right,
+	width = w - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
    
    
@@ -111,7 +111,12 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
     chart.append("g")
     		.attr("class", "x axis")
     		.attr("transform", "translate(0," + height + ")")
-    		.call(xAxis);
+    		.call(xAxis)
+    	  .append("text")
+    	  .attr("x",530)
+    	  .attr("y",-5)
+    	  .style("text-anchor","end")
+    	  .text("Year");
     		
     chart.append("g")
     		.attr("class", "y axis")
@@ -155,7 +160,6 @@ function sectorLine(derta) {
 		sector.append("path")
 				.attr("class", "line")
 				.attr("d", function(d) { return line(d.values); } )
-				.style("stroke","white")
 				.transition()
 				.style("opacity",1);
 				

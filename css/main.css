@@ -479,6 +479,16 @@ html, button, input, select, textarea {
   background: #0065bd;
 }
 
+::selection {
+  color: white;
+  background: #666666;
+}
+
+::-moz-selection {
+  color: #0065bd;
+  background: white;
+}
+
 a {
   color: highlight;
 }
@@ -517,6 +527,7 @@ a {
   transition: background .3s linear;
   float: left;
   clear: both;
+  margin-left: 6.4em;
 }
 .show-sectors:hover {
   background: #0073d7;
@@ -528,6 +539,7 @@ a {
 
 .chart {
   float: left;
+  margin-left: 4em;
 }
 .chart rect {
   fill: white;
@@ -557,6 +569,10 @@ a {
 .chart .sector.mfg path {
   stroke-dasharray: none;
 }
+.chart .sector.basis {
+  z-index: 0;
+  position: relative;
+}
 .chart .sector.basis path {
   stroke-dasharray: none;
   stroke: #0073d7;
@@ -565,4 +581,14 @@ a {
 .pt {
   fill: red;
   cursor: pointer;
+}
+
+@media screen and (max-width: 48em) {
+  .chart {
+    margin-left: 4em;
+  }
+
+  .show-sectors {
+    margin-left: 6.4em;
+  }
 }
