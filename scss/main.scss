@@ -234,6 +234,7 @@ a {
      &.basis {
       path {
         stroke-dasharray: none;
+        stroke: lighten($primary-dark, 5);
       }
     }
   }

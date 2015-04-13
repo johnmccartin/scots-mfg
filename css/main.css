@@ -555,6 +555,7 @@ a {
 }
 .chart .sector.basis path {
   stroke-dasharray: none;
+  stroke: #0073d7;
 }
 
 .pt {
