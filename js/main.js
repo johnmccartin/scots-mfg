@@ -63,9 +63,30 @@ var chart = d3.select(".chart")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
 
+/*
+var extent = d3.extent(data,function(d) { return d.date; }),
+	dateHash = data.reduce(fucntion(agg, d) {
+		agg[d.date] = true;
+		return agg;
+	}, {}),
+	headers = color.domain();
 	
+	d3.time.days(extent[0], extent[1])
+		.filter(function(date) {
+			return !dateHash[date];
+		})
+		.forEach(function(date) {
+			var emptyRows = { date: date };
+			headers.forEach(function(header) {
+				emptyRow[header] = null;
+			});
+			data.push(emptyRow);
+		});
+		
+	data.sort(function(a,b) { return d3.ascending(a
+
+	*/
 
 d3.csv("./data/scot_mfg.csv", function(error, data) {
 	color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
@@ -83,6 +104,13 @@ d3.csv("./data/scot_mfg.csv", function(error, data) {
       }
       )
     };
+  });
+  
+  sectors.push({
+  	name: "basis",
+  	values: data.map(function(d) {
+  		return {date: d.date, rate: 100 };
+  	})
   });
   
   console.log(sectors);
@@ -160,6 +188,8 @@ function sectorLine(derta) {
 			    .attr("x", 0)
 			    .attr("dy", ".35em")
 			    .text(function(d) { return d.name; });
+			    
+
 			    
 
 }
